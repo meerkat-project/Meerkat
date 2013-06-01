@@ -1,7 +1,7 @@
 Meerkat::Application.routes.draw do
 
-
-  get "users/new"
+  #Users Controller
+  match '/signup', to: 'users#new'
 
   #Static Pages
   root to: 'static_pages#home'
