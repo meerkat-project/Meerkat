@@ -4,14 +4,15 @@
 
 <div id= "form" class= "row">
 	<div class= "small-6 small-centered columns">
-		<%= form_for(:user, url: signup_path) do |f| %>
+		<%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages' %>
 			<%= f.label :email %>
       <%= f.text_field :email %>
       <%= f.label :username %>
       <%= f.text_field :username %>
       <%= f.label :password %>
       <%= f.password_field :password %>
-      <%= f.label :password_confirmation %>
+      <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation %>
       <%= f.submit "Sign Up", class: "button small-centered columns", id: "submitButton" %>
     <% end %>

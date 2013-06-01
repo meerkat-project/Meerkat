@@ -1,5 +1,6 @@
 Meerkat::Application.routes.draw do
-
+  resources :users
+  
   #Users Controller
   match '/signup', to: 'users#new'
 
